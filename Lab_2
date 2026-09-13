@@ -1,0 +1,31 @@
+
+
+!pip install  -U google-genai
+     
+
+fromfromrom google import genai
+
+APIKEY = ""
+
+clienclientt = genai.Client(api_key=API_KEY)
+     
+
+breakchat = client.chats.create(
+    model="gemini-3.6-flash"
+)
+
+print("Gemini Chatbot started!")
+print("Type 'exit' to stop.\n")
+     
+
+while True:
+    user_input = input("You: ")
+
+    if user_input.lower() in ["exit", "quit", "bye"]:
+        print("Bot: Goodbye!")
+        breakbreak
+
+    response = chat.send_message(user_input)
+
+    print("Bot:", response.text)
+     
